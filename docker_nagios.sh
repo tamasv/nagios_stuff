@@ -35,9 +35,5 @@ esac
 done
 HOST=$(hostname -f)
 print_nrdp "$(/usr/local/bin/check_docker --containers $NAME --present --cpu $CPU --mem $MEM --status running --uptime $UPTIME)"
-#print_nrdp "$(/usr/local/bin/check_docker --containers $NAME --present --status running)"
-#print_nrdp "$(/usr/local/bin/check_docker --containers $NAME --present --cpu $CPU)"
-#print_nrdp "$(/usr/local/bin/check_docker --containers $NAME --present --mem $MEM)"
-#print_nrdp "$(/usr/local/bin/check_docker --containers $NAME --present --uptime $UPTIME)"
 
 

@@ -11,7 +11,6 @@ print_nrdp() {
 SERVICENAME=$1
 HOST=$(hostname -f)
 COMMAND="/usr/local/nagios/libexec/${@:2}"
-echo $COMMAND
 print_nrdp "$COMMAND" "$SERVICENAME"
 
 
