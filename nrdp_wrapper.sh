@@ -4,7 +4,7 @@ print_nrdp() {
 	EXIT_CODE=$?
 	SERVICENAME=$2
 	IFS=$'|'; arrIN=($CMD); unset IFS;
-	echo "$HOST;$SERVICENAME;$EXIT_CODE;${arrIN[0]}"
+    echo "$HOST;$SERVICENAME;$EXIT_CODE;${arrIN[0]//;/ \-}"
 
 }
 
