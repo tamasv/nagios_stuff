@@ -13,7 +13,7 @@ HOST=$(hostname -f)
 if test -f "/usr/local/nagios/libexec/${@:2}"; then
 	COMMAND="/usr/local/nagios/libexec/${@:2}"
 else
-	COMMAND="/usr/lib/nagios/libexec/${@:2}"
+	COMMAND="/usr/lib/nagios/plugins/${@:2}"
 fi
 print_nrdp "$COMMAND" "$SERVICENAME"
 
