@@ -10,7 +10,8 @@ print_nrdp() {
 
 SERVICENAME=$1
 HOST=$(hostname -f)
-if test -f "/usr/local/nagios/libexec/${@:2}"; then
+CHECK_NAME=(${@:2})
+if test -f "/usr/local/nagios/libexec/$CHECK_NAME"; then
 	COMMAND="/usr/local/nagios/libexec/${@:2}"
 else
 	COMMAND="/usr/lib/nagios/plugins/${@:2}"
